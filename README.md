@@ -373,7 +373,7 @@ These are the steps required to localize your existing application:
 2. Initialize `i18next` instance - see [the example app](examples/multi-language/multi-language-app.js)
 3. Set `i18next` instance to your app to enable localization: `app.setI18next(i18next)`
 4. Create directory with all locales
-5. Ommit utterances in all intents and access the translate function using `app.t('key')`
+5. Omit utterances in all intents and access the translate function using `app.t('key')`
 
 Localized intent example:
 
