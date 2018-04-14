@@ -373,7 +373,7 @@ These are the steps required to localize your existing application:
 2. Initialize `i18next` instance - see [the example app](examples/multi-language/multi-language-app.js)
 3. Set `i18next` instance to your app to enable localization: `app.setI18next(i18next)`
 4. Create directory with all locales
-5. Ommit utterances in all intents and access the translate function using `app.t('key')` 
+5. Ommit utterances in all intents and access the translate function using `app.t('key')`
 
 Localized intent example:
 
@@ -400,7 +400,7 @@ Localization notes:
 - To localize built in intents, say `AMAZON.YesIntent` use entry names after the `.` suffix. So `AMAZON.YesIntent` becomes just `YesIntent`
 - To access the translation use: `app.t('key')` This `key` needs to be nested in the current intent translation entry. You don't have to use the full path to the key - the prefix is automatically added depending on the current request
 - Each intent translation should have `utterances` property. We support the `richUtterances` syntax f.e: `My age is {age:Number}`
-- The locale to be used is decided depending on the `data.request.locale` Its value could be currently one of: `en-US`, `en-GB`, `de-DE`
+- The locale to be used is decided depending on the `data.request.locale` Its value could be currently one of: `en-US`, `en-GB`, `en-CA`, `en-IN`, `en-AU`, `de-DE`, `fr-FR`, `ja-JP`
 
 ### Handling Amazon Requests
 
@@ -446,7 +446,7 @@ server.start((err) => {
   if (err) throw err;
   console.log('Server running at:', server.info.uri);
   app.saveSpeechAssets();
-});
+  });
 ```
 
 ## Deploy
@@ -578,7 +578,7 @@ describe('(Intent) MyIntent', () => {
 
     // Simulate Alexa request handling
     app.handle(intentRequest, response => {
-      
+
       // Test the response
       expect(response).to.be.defined;
       done();
