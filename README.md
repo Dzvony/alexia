@@ -454,13 +454,15 @@ server.start((err) => {
 ### Heroku
 
  1. Create free [Heroku](https://www.heroku.com) acount
- 2. Install [Heroku toolbelt](https://toolbelt.heroku.com/)
+ 2. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+    - ensure that you don’t have the legacy Heroku Toolbelt or Heroku Ruby gem installed
  3. Be sure to have `start` script defined in `package.json`
  4. Be sure to create server handler on POST endpoint. See [Handling Amazon Requests](#handling-amazon-requests)
  5. Run `git init` if git was not yet initialized in your project
- 6. Run `heroku create` in project directory
- 7. Run `git push heroku master`
- 8. Copy your server URL to your Alexa Skill configuration. See [Create Alexa Skill](#create-alexa-skill)
+ 6. Be sure to `heroku login` and enter your credentials
+ 7. Run `heroku create` in project directory
+ 8. Run `git push heroku master`
+ 9. Copy your server URL to your Alexa Skill configuration. See [Create Alexa Skill](#create-alexa-skill)
 
 ### AWS Lambda
 
